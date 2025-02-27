@@ -19,26 +19,21 @@ public class WeatherController : Controller
 
     public async Task<IActionResult> Index()
     {
-        // Replace with your real API URL and include your API key
-        var apiKey = _configuration["OpenWeather:ApiKey"];
-        var baseUrl = _configuration["OpenWeather:BaseUrl"];
-        var city = "Copenhagen";
-        string url = $"{baseUrl}?q={city}&appid={apiKey}&units=metric";
+        var apiUrl = _configuration["MyWeatherAPI:BaseUrl"]; // Din lokale API URL
+        string city = "Copenhagen";
+        string url = $"{apiUrl}/Weather/{city}";
 
-        // Send the HTTP request
         var response = await _httpClient.GetAsync(url);
 
-        // Ensure it was successful
-        response.EnsureSuccessStatusCode();
+        if (response.IsSuccessStatusCode)
+        {
+            var jsonString = await response.Content.ReadAsStringAsync();
+            var weatherData = JsonSerializer.Deserialize<Rootobject>(jsonString);
+            return View(weatherData);
+        }
 
-        // Read response as a string
-        var jsonString = await response.Content.ReadAsStringAsync();
-
-        // Deserialize JSON to your WeatherData model
-        Rootobject weatherData = JsonSerializer.Deserialize<Rootobject>(jsonString);
-
-        // Pass the deserialized object to the view
-        return View(weatherData);
+        return View("Error");
     }
 }
+
 

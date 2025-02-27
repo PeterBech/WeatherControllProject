@@ -400,11 +400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\WeatherControllProject\\WeatherControll\\WeatherControll.csproj",
+      "projectUniqueName": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\3. semester\\WeatherControll\\WeatherControll.csproj",
       "projectName": "WeatherControll",
-      "projectPath": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\WeatherControllProject\\WeatherControll\\WeatherControll.csproj",
+      "projectPath": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\3. semester\\WeatherControll\\WeatherControll.csproj",
       "packagesPath": "C:\\Users\\pibm9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\WeatherControllProject\\WeatherControll\\obj\\",
+      "outputPath": "C:\\Users\\pibm9\\Documents\\Datamatiker\\Programmering\\3. semester\\WeatherControll\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
