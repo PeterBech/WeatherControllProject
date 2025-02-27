@@ -1,0 +1,7 @@
+.vs/
+/obj/bin/
+obj/
+*.exe
+*.pdb
+appsettings*.json
+appsettings.json

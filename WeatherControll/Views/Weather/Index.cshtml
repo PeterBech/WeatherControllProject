@@ -1,0 +1,36 @@
+﻿@model WeatherControll.Models.Rootobject
+
+<h1>Vejret i @Model.name</h1>
+@if (Model.weather != null && Model.weather.Length > 0)
+{
+    var w = Model.weather[0];
+    <div>
+        <p>
+            <strong> Main Condition:</strong> @w.main <br />
+            <strong>Description:</strong> @w.description
+        </p>
+        <img src="@($"https://openweathermap.org/img/wn/{w.icon}@2x.png")"/>
+    </div>
+}
+else
+{
+    <p>Vejrikon ikke tilgængeligt</p>
+}
+<p>Temperatur: @Model.main.temp °C</p>
+<p>Temperatur føles som: @Model.main.feels_like °C</p>
+<p>Højeste temperatur: @Model.main.temp_max °C</p>
+<p>Laveste temperatur: @Model.main.temp_min °C</p>
+<p>Luftfugtighed: @Model.main.humidity %</p>
+
+<h3>Vejrforhold:</h3>
+<ul>
+    @foreach (var weather in Model.weather)
+    {
+        <li>@weather.description</li>
+    }
+</ul>
+
+<h3>Vindforhold:</h3>
+<p>Vindhastighed: @Model.wind.speed m/s</p>
+<p>Vindretning: @Model.wind.deg°</p>
+

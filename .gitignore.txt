@@ -1,0 +1,45 @@
+# VS Code folder
+.vscode/
+
+# ASP.NET Core files
+bin/
+obj/
+wwwroot/
+
+# .NET Core specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Appsettings files
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# OS generated files
+.DS_Store
+Desktop.ini
+
+# JetBrains Rider
+.idea/
+
+# MacOS files
+*.swp
+*~
